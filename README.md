@@ -6,8 +6,8 @@ Express es una poderosa librería que simplifica enormemente la creación de ser
 
 En este documento, exploraremos cómo Express puede hacer que el enrutamiento en tu aplicación sea más eficiente y comprensible. También abordaremos conceptos fundamentales como los path params (parámetros de ruta), que son una parte fundamental de cómo Express maneja las solicitudes a traves de rutas dinamicas.
 
+---
 ### rutas en express
-
 El enrutamiento en Express es una parte esencial de la construcción de aplicaciones web. Nos permite manejar peticiones dirigidas a diferentes URLs, respondiendo de manera adecuada según los distintos métodos HTTP, como GET, POST, PUT y DELETE.
 
 ```javascript
@@ -77,6 +77,12 @@ app.use("/users", router)//le digo que todo los que se dirija a la ruta "/users"
 app.listen(3000, ()=>console.log("server on port 3000"))
 ```
 
-De este modo creamos rutas de manera modularizada,con código limpio y reduciendo la redundancia con Router de express
+De este modo creamos rutas de manera modularizada,con código limpio y reduciendo la redundancia con Router de express, ahora podemos acceder a las rutas definidas de la siguiente forma 
 
-
+```
+http://localhost:3000/users/delete
+```
+```
+http://localhost:3000/users/get-all-users
+```
+---
